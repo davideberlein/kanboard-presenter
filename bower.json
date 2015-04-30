@@ -1,0 +1,19 @@
+{
+  "name": "study-kanban-presenter",
+  "version": "0.1.0",
+  "authors": [
+    "David Eberlein <david.eberlein@ch.sauter-bc.com>",
+    "Denis Trüby <denis.trueby@ch.sauter-bc.com>"
+  ],
+  "description": "Presenter for Kanban boards",
+  "main": "public/index.html",
+  "license": "MIT",
+  "dependencies": {
+    "angularjs": "~1.3.15",
+    "angular-ui-router": "~0.2.13",
+    "angular-material": "~0.8.3",
+    "font-awesome": "~4.3.0",
+    "underscore": "~1.8.2",
+    "angular-scroll": "~0.6.5"
+  }
+}

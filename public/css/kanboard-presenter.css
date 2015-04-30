@@ -1,0 +1,111 @@
+/**
+* Navigation Bar
+**/
+md-toolbar {
+    min-height: 48px;
+}
+
+md-toolbar .md-toolbar-tools {
+    height: 48px;
+    min-height: 48px;
+}
+
+md-toolbar md-tabs.md-default-theme md-tab {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+md-toolbar md-tabs.md-default-theme md-tab.active {
+    color: #ffffff;
+}
+
+md-toolbar md-tabs.md-default-theme md-tab:focus {
+    color: #FFEB3B;
+}
+
+#pause-btn {
+    position: absolute;
+    right: 48px;
+    bottom: 48px;
+}
+
+/**
+* Board Columns and Swimlanes
+**/
+
+.board-col {
+    max-width: 600px;
+}
+
+.board-col .col-title, .swim-lane .swim-lane-title {
+    font-weight: 100;
+    padding: 0 16px;
+}
+
+/**
+* Board Tasks
+**/
+.task {
+    transition: all 400ms ease-out 50ms;
+    border-radius: 4px;
+    margin: 8px 0;
+}
+
+.task .task-header {
+    border-radius: 4px 4px 0 0;
+    background: rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+    padding: 8px 16px;
+}
+
+.task .task-content {
+    padding: 8px 16px;
+}
+
+.task .task-footer {
+    padding: 8px 16px;
+    font-size: 0.8em;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.task .task-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+    font-weight: 800;
+    font-size: 1em;
+}
+
+.task .task-description {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.task.yellow {
+    background: #ffff8d;
+}
+
+.task.blue {
+    background: #84ffff;
+}
+
+.task.green {
+    background: #b9f6ca;
+}
+
+.task.purple {
+    background: #b388ff;
+}
+
+.task.red {
+    background: #ff8a80;
+}
+
+.task.orange {
+    background: #FFB74D;
+}
+
+.task.grey {
+    background: #f5f5f5;
+}

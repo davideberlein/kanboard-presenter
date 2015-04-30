@@ -1,0 +1,28 @@
+<md-content layout="column" ng-controller="KanboardPresenterCtrl as boardCtrl">
+    <section class="swim-lane" flex layout="column" ng-repeat="swimlane in boardCtrl.board">
+        <h2 class="swim-lane-title" flex>{{swimlane.name}}</h2>
+        <md-divider></md-divider>
+        <div flex layout="row" layout-padding>
+            <section class="board-col" flex layout="column" layout-padding ng-repeat="col in swimlane.columns">
+                <h3 class="col-title">{{col.title}}</h3>
+
+                <div ng-repeat="task in col.tasks" class="task md-whiteframe-z1 {{task.color_id}}">
+                    <div class="task-header">
+                        <h3 class="task-title">{{task.title}}</h3>
+                    </div>
+                    <div class="task-content" flex layout="column">
+                        <span class="task-description">{{task.description}}</span>
+                    </div>
+                    <md-divider></md-divider>
+                    <div class="task-footer" flex layout="column">
+                        <div flex layout="row" layout-align="space-between center">
+                            <span class="task-user" ng-if="task.assignee_username"><i class="fa fa-user"></i> {{task.assignee_name}}</span>
+                            <span class="task-category" ng-if="task.category_id > 0"><i class="fa fa-archive"></i> {{boardCtrl.categories[task.category_id]}}</span>
+                            <span class="task-due-date" ng-if="task.date_due > 0"><i class="fa fa-calendar"></i> {{ (task.date_due*1000)  | date:'dd.MM.yy'}}</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+</md-content>

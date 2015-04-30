@@ -1,0 +1,34 @@
+{
+  "name": "kanban-presenter",
+  "version": "0.2.1",
+  "main": "http://localhost:16565/index.html#/board/",
+  "node-main": "server.js",
+  "window": {
+    "title": "Kanboard Presenter",
+    "toolbar": false,
+    "frame": false,
+    "position": "center",
+    "width": 800,
+    "height": 600,
+    "min_width": 400,
+    "min_height": 200,
+    "always-on-top": true,
+    "kiosk": true
+  },
+  "dependencies": {
+    "body-parser": "~1.4.2",
+    "express": "~4.5.1",
+    "method-override": "~2.0.2",
+    "node-rest-client": "^1.4.4",
+    "nw": "^0.12.0",
+    "q": "^1.2.0",
+    "underscore": "^1.8.2"
+  },
+  "devDependencies": {
+    "bower": "^1.3.12",
+    "del": "^1.1.1",
+    "gulp": "^3.8.11",
+    "gulp-bower": "0.0.10",
+    "node-webkit-builder": "^1.0.11"
+  }
+}

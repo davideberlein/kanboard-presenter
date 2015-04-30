@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html ng-app="kanboard-presenter">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Applied Science Projects</title>
+
+    <!-- ###################### CSS includes ###################### -->
+    <!-- Angular-Material-->
+    <link rel="stylesheet" type="text/css" href="/angular-material/angular-material.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:400,500,700,400italic">
+
+    <!-- Font Awesome-->
+    <link rel="stylesheet" type="text/css" href="/font-awesome/css/font-awesome.min.css"/>
+
+
+    <!-- Kanboard Presenter-->
+    <link rel="stylesheet" type="text/css" href="/css/kanboard-presenter.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/animations.css"/>
+
+
+    <!-- ############################################ -->
+
+    <!-- ###################### JavaScript includes ###################### -->
+    <!-- Underscore JS -->
+    <script type="application/javascript" src="/underscore/underscore-min.js"></script>
+
+    <!-- Angular JS -->
+    <script type="application/javascript" src="/angularjs/angular.js"></script>
+
+    <!-- Angular Modules -->
+    <script type="application/javascript" src="/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script type="application/javascript" src="/angular-animate/angular-animate.min.js"></script>
+    <script type="application/javascript" src="/angular-aria/angular-aria.min.js"></script>
+    <script type="application/javascript" src="/angular-material/angular-material.min.js"></script>
+    <script type="application/javascript" src="/angular-scroll/angular-scroll.min.js"></script>
+
+    <!-- Kanboard Presenter-->
+    <script type="application/javascript" src="/js/angular/kanboard-presenter.js"></script>
+    <script type="application/javascript" src="/js/angular/kanboard-service.js"></script>
+    <script type="application/javascript" src="/js/angular/kanboard-nav-service.js"></script>
+    <script type="application/javascript" src="/js/angular/kanboard-nav-ctrl.js"></script>
+    <script type="application/javascript" src="/js/angular/kanboard-board-ctrl.js"></script>
+
+
+</head>
+<body layout="row" ng-controller="KanboardNavCtrl as navCtrl">
+<div id="main-content" flex layout="column" tabIndex="-1" role="main">
+    <md-toolbar class="md-default-theme">
+        <div class="md-toolbar-tools">
+            <div layout="row" flex class="fill-height">
+                <div flex>
+                    <md-tabs md-stretch-tabs="never" class="md-toolbar-item md-tools">
+                        <md-tab ng-repeat="project in navCtrl.projects track by project.id"
+                                md-active="project.id === navCtrl.stateParams.id"
+                                label="{{project.name}}"
+                                ui-sref="board({id: project.id})">
+                        </md-tab>
+                    </md-tabs>
+                </div>
+                <h3 class="md-toolbar-item">Applied Science Projects</h3>
+            </div>
+        </div>
+    </md-toolbar>
+    <md-content id="board-view" class="scroll-container" ui-view flex></md-content>
+    <md-button id="pause-btn" class="md-fab md-primary" aria-label="Pause" ng-click="navCtrl.togglePaused()">
+        <i class="fa" ng-class="{'fa-pause': !navCtrl.isPaused(), 'fa-play': navCtrl.isPaused()}"></i>
+    </md-button>
+</div>
+</body>
+</html>
