@@ -1,7 +1,7 @@
 study-kanboard-presenter
 ======================
 
-NodeJS and AngularJS application that displays all Kanban boards of a configured Kanboard (fguillot/kanboard) server in a cyclic manor.<br>
+NodeJS and AngularJS application that displays all Kanban boards of a configured Kanboard (fguillot/kanboard, http://kanboard.net) server in a cyclic manor.<br>
 The goal of this app is to simply present all important Kanban Boards of multiple Projects on a TV screen in a beautiful, automatic way.<br>
 The App runs fine on a Raspberry Pi 2 using the linaro ubunto image.
 
