@@ -9,3 +9,5 @@ RUN npm install
 RUN bower install --allow-root
 
 CMD ["node", "server.js"]
+
+EXPOSE 16565
