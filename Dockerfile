@@ -1,4 +1,4 @@
-FROM node:4.6
+FROM node:6.9.1
 
 WORKDIR /opt/kanboard-presenter
 
