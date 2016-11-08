@@ -42,7 +42,7 @@ To do so, use the following URL: http://localhost:16565/#/user/{YOUR_USER_ID}/bo
 6. Open http://localhost:16565 in the browser to view the presenter.
 
 ##Docker
-You can build and run a docker container:
+You can build and run a docker container:<br>
 1. Install docker.
 2. Navigate to the repo dir in the command line.
 3. Run <code>docker build . -t kanboard-presenter</code>
