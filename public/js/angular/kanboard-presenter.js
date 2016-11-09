@@ -7,7 +7,7 @@
 
     KanboardPresenter.config(['$urlRouterProvider', '$stateProvider', '$mdThemingProvider', function ($urlRouterProvider, $stateProvider, $mdThemingProvider) {
         // Routes
-        $urlRouterProvider.otherwise('/user/17/board/');
+        $urlRouterProvider.otherwise('/user/1/board/1');
         $stateProvider.state({
             name: 'board',
             url: '/user/{userId:int}/board/{id}',

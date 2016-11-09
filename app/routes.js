@@ -3,8 +3,11 @@ var DEBUG = false;
 var _ = require('underscore'),
     kanboardApi = require('./kanboard-api');
 
+var srv_addr = process.env.KANBOARD_ADDR || 'localhost' ; // set our server address
+var srv_key = process.env.KANBOARD_APIKEY || '123456789abcdef' ; // set our API key
+
 // Enter the API-URL and API-Token of your Kanboard here.
-kanboardApi.configureServer('https://YOUR.SERVER.URL/jsonrpc.php','YOUR.SERVER.API.TOKEN');
+kanboardApi.configureServer('https://' + srv_addr + '/jsonrpc.php', srv_key);
 
 module.exports = function (app) {
 

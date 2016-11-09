@@ -26,7 +26,7 @@ The frontend is implemented using AngularJS and is visualized with AngularMateri
 You may retrieve this information on the Kanboard from: <code>Home > Settings > API</code>.<br>
 <i>hint: Admin rights are needed to access this page.</i><br>
 
-The API Endpoint and API Token must be configured in the following file:
+The API Endpoint and API Token must be configured using environment variables <code>KANBOARD_ADDR</code>, <code>KANBOARD_APIKEY</code> or in the following file:
 <code>app/routes.js</code> and the function <code>kanboardApi.configureServer()</code>.
 
 ###Configure the user
@@ -36,9 +36,18 @@ To do so, use the following URL: http://localhost:16565/#/user/{YOUR_USER_ID}/bo
 ##Installing, building and running
 1. Download and install nodejs from https://nodejs.org/download/
 2. Navigate to the repo dir in the command line.
-2. Call <code>npm install</code>.
-3. Call <code>bower install</code>. (If problems come up check if the proxy conifg fits your network environment in .bowerrc)
-4. Call <code>node server.js</code> and the server will start
+3. Call <code>npm install</code>.
+4. Call <code>bower install</code>. (If problems come up check if the proxy config fits your network environment in .bowerrc)
+5. Call <code>node server.js</code> and the server will start
+6. Open http://localhost:16565 in the browser to view the presenter.
+
+##Docker
+You can build and run a docker container:
+
+1. Install docker.
+2. Navigate to the repo dir in the command line.
+3. Run <code>docker build . -t kanboard-presenter</code>
+4. Start the container: <code>docker run -p 16565:16565 -e KANBOARD_ADDR=server.company.com -e KANBOARD_APIKEY=abcdef1234567890</code>
 5. Open http://localhost:16565 in the browser to view the presenter.
 
 ##Distribution

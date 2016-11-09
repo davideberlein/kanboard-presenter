@@ -6,7 +6,7 @@
             <section class="board-col" flex layout="column" layout-padding ng-repeat="col in swimlane.columns">
                 <h3 class="col-title">{{col.title}}</h3>
 
-                <div ng-repeat="task in col.tasks" class="task md-whiteframe-z1 {{task.color_id}}">
+                <div ng-repeat="task in col.tasks" ng-if="task.is_active > 0" class="task md-whiteframe-z1 {{task.color_id}}">
                     <div class="task-header">
                         <h3 class="task-title">{{task.title}}</h3>
                     </div>
