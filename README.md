@@ -9,7 +9,7 @@ The App runs fine on a Raspberry Pi 2 using the linaro ubunto image.
 
 ## Kanboard
 This app needs a running fguillot/kanboard server and its API Token as prerequisite.<br>
-The Proxy communicates with the the Kanboard using its JSON RPC interface.<br>
+The Proxy communicates with the Kanboard using its JSON RPC interface.<br>
 Compatibility was tested up to Kanboard v1.0.13 API.
 
 ## Structure
